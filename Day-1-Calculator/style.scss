@@ -1,0 +1,69 @@
+// Variables
+$primary-color: #315b7d;
+$button-background: #f09f9c;
+$button-text-color: #494545;
+$button-hover-color: #ffe2df;
+$border-color: #ccc;
+
+@mixin common-padding-radius() {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.Calculator {
+  margin: 20px auto;
+  max-width: 400px;
+  border: 1px solid $border-color;
+  @mixin common-padding-radius;
+}
+
+.Display-screen {
+  background-color: white;
+  border: 1px solid $border-color;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  text-align: right;
+  @mixin common-padding-radius;
+}
+
+.Calculator-key {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.Calculator-Key-enter {
+  grid-column: 4 /5;
+  grid-row: 2 / span 4;
+}
+
+button {
+  font-size: 1.2em;
+  border: none;
+  background-color: $button-background;
+  color: $button-text-color;
+  cursor: pointer;
+  @mixin common-padding-radius;
+}
+
+button:hover {
+  background-color: $button-hover-color;
+}
+
+.Calculator-Key-AC {
+  background-color: #e74c3c;
+}
