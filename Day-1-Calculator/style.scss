@@ -16,37 +16,47 @@ body {
   padding: 0;
 }
 
-header,
-footer {
+header {
   background-color: $primary-color;
   color: white;
   text-align: center;
   padding: 10px 0;
 }
 
-.Calculator {
+footer {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.calculator {
   margin: 20px auto;
   max-width: 400px;
   border: 1px solid $border-color;
-  @mixin common-padding-radius;
+  @include common-padding-radius;
 }
 
-.Display-screen {
+#display-screen {
   background-color: white;
   border: 1px solid $border-color;
   margin-bottom: 10px;
   font-size: 2rem;
   text-align: right;
-  @mixin common-padding-radius;
+  min-height: 40px;
+  @include common-padding-radius;
 }
 
-.Calculator-key {
+.calculator-key {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
 }
 
-.Calculator-Key-enter {
+.calculator-Key-enter {
   grid-column: 4 /5;
   grid-row: 2 / span 4;
 }
@@ -57,13 +67,13 @@ button {
   background-color: $button-background;
   color: $button-text-color;
   cursor: pointer;
-  @mixin common-padding-radius;
+  @include common-padding-radius;
 }
 
 button:hover {
   background-color: $button-hover-color;
 }
 
-.Calculator-Key-AC {
+.calculator-Key-clear {
   background-color: #e74c3c;
 }

@@ -6,30 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator-Demo</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
   </head>
   <body>
     <header>Calculator-Demo</header>
-    <div class="Calculator">
-      <div class="Display-screen">Ans</div>
-      <div class="Calculator-key">
-        <button class="Calculator-Key-plus">+</button>
-        <button class="Calculator-Key-minus">-</button>
-        <button class="Calculator-Key-multiply">*</button>
-        <button class="Calculator-Key-divide">/</button>
+    <div class="calculator">
+      <div id="display-screen">Ans</div>
+      <div class="calculator-key">
+        <button class="calculator-Key-plus" onclick="appendToDisplay('+')">
+          +
+        </button>
+        <button class="calculator-Key-minus" onclick="appendToDisplay('-')">
+          -
+        </button>
+        <button class="calculator-Key-multiply" onclick="appendToDisplay('*')">
+          *
+        </button>
+        <button class="calculator-Key-divide" onclick="appendToDisplay('/')">
+          /
+        </button>
 
-        <button class="Calculator-Key-7">7</button>
-        <button class="Calculator-Key-8">8</button>
-        <button class="Calculator-Key-9">9</button>
-        <button class="Calculator-Key-4">4</button>
-        <button class="Calculator-Key-5">5</button>
-        <button class="Calculator-Key-6">6</button>
-        <button class="Calculator-Key-1">1</button>
-        <button class="Calculator-Key-2">2</button>
-        <button class="Calculator-Key-3">3</button>
-        <button class="Calculator-Key-0">0</button>
-        <button class="Calculator-Key-.">.</button>
-        <button class="Calculator-Key-AC">AC</button>
-        <button class="Calculator-Key-enter">=</button>
+        <button class="calculator-Key-7" onclick="appendToDisplay('7')">
+          7
+        </button>
+        <button class="calculator-Key-8" onclick="appendToDisplay('8')">
+          8
+        </button>
+        <button class="calculator-Key-9" onclick="appendToDisplay('9')">
+          9
+        </button>
+        <button class="calculator-Key-4" onclick="appendToDisplay('4')">
+          4
+        </button>
+        <button class="calculator-Key-5" onclick="appendToDisplay('5')">
+          5
+        </button>
+        <button class="calculator-Key-6" onclick="appendToDisplay('6')">
+          6
+        </button>
+        <button class="calculator-Key-1" onclick="appendToDisplay('1')">
+          1
+        </button>
+        <button class="calculator-Key-2" onclick="appendToDisplay('2')">
+          2
+        </button>
+        <button class="calculator-Key-3" onclick="appendToDisplay('3')">
+          3
+        </button>
+        <button class="calculator-Key-0" onclick="appendToDisplay('0')">
+          0
+        </button>
+        <button class="calculator-Key-." onclick="appendToDisplay('.')">
+          .
+        </button>
+        <button class="calculator-Key-clear" onclick="clearValue()">
+          Clear
+        </button>
+        <button class="calculator-Key-enter" onclick="calculte()">=</button>
       </div>
     </div>
     <footer>Made by Vivek</footer>
