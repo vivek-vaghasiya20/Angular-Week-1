@@ -1,6 +1,6 @@
 addtask = () => {
-  const taskinput = document.getElementsByClassName("task input");
-  const tasklist = document.getElementsByClassName("task list");
+  const taskinput = document.getElementsByClassName("task-input");
+  const tasklist = document.getElementsByClassName("task-list");
 
   const taskitem = taskinput.value;
 
