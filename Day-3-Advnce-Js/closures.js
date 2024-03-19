@@ -1,3 +1,5 @@
+//1) make factorial program using closures. range 0-10
+
 //2)
 // function calculate(x) {
 //     function multiply(y) {
@@ -16,17 +18,57 @@
 
 //3)
 
-function outest() {
-  var c = 12;
-  function outer(b) {
-    function inner() {
-      console.log(a, b, c);
-    }
-    let a = 10;
-    return inner;
-  }
-  return outer;
-}
-let a = 100;
-var close = outest()("Hello Closure");
-close();
+// function outest() {
+//   var c = 12;
+//   function outer(b) {
+//     function inner() {
+//       console.log(a, b, c); //10 Hello Closure 12
+//     }
+//     let a = 10; // if i remove this line then it will print 100 insted of 10
+//     return inner;
+//   }
+//   return outer;
+// }
+// let a = 100;
+// var close = outest()("Hello Closure");
+// close();
+// here each function take it's parent lexical scope and generate closures.
+
+//4)
+
+// function setCount() {
+//     let number = 0;
+//     return function () {
+//     console.log(number++);
+//     console.log(++number);
+//         };
+//     }
+//     const counter = setCount();
+
+//     counter(); // 0 2-current value and increments after print
+//     counter(); // 2 4
+//     counter(); // 4 6
+
+//extra)
+
+// for (let i = 0; i < 5; i++) { // take i as a block scope that's why alocate new memory every time
+//   setTimeout(() => {
+//     console.log(i);
+//   }, 1000);
+// }
+
+// for (var i = 0; i < 5; i++) { //take i as a global scope
+//   setTimeout(() => {
+//     console.log(i);
+//   }, 1000);
+// }
+
+// for (var i = 0; i < 5; i++) {
+//   function vivek(i) {
+//     //make i as a local(function) scope
+//     setTimeout(() => {
+//       console.log(i);
+//     }, 1000);
+//   }
+//   vivek(i);
+// }
