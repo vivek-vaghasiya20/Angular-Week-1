@@ -55,13 +55,13 @@
 //   setTimeout(() => {
 //     console.log(i);
 //   }, 1000);
-// }
+// } //0,1,2,3,4
 
 // for (var i = 0; i < 5; i++) { //take i as a global scope
 //   setTimeout(() => {
 //     console.log(i);
 //   }, 1000);
-// }
+// } // 5,5,5,5,5
 
 // for (var i = 0; i < 5; i++) {
 //   function vivek(i) {
@@ -71,4 +71,26 @@
 //     }, 1000);
 //   }
 //   vivek(i);
+// } // 0,1,2,3,4
+
+// var a = 1;
+// var b;
+// // const fa = () =>
+// function myFunction() {
+//   var b = 1;
+//   console.log("B", b); //1
 // }
+// myFunction();
+// console.log(a, b); // 1 undefined
+
+function myFunction() {
+  var message = "Hello, world!";
+  console.log(message); // prints "Hello, world!"
+  if (true) {
+    var message = "Goodbye, world!";
+    console.log(message); // prints "Goodbye, world!"
+  }
+  console.log(message); // prints "Goodbye, world!"
+}
+myFunction();
+console.log(message); // Reference error: not defined
