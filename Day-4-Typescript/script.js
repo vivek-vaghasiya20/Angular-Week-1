@@ -1,8 +1,10 @@
 var employeeInfo = /** @class */ (function () {
-    function employeeInfo(fName, lName, age) {
+    function employeeInfo(fName, lName, age, address, contact) {
         this.fName = fName;
         this.lName = lName;
         this.age = age;
+        this.address = address;
+        this.contact = contact;
     }
     employeeInfo.prototype.getFullName = function () {
         return "fullName: ".concat(this.fName, " ").concat(this.lName);
@@ -12,14 +14,21 @@ var employeeInfo = /** @class */ (function () {
     };
     return employeeInfo;
 }());
-var employeeOne = new employeeInfo("Vivek", "Vaghasiya", 21);
-employeeOne.address = {
-    street: "Shiv Nagar Soc.,Kargil Chowk",
+var employeeOne = new employeeInfo("Vivek", "Vaghasiya", 21, {
+    street: "Shiv Nagar Soc., Kargil Chowk",
     landMark: "Punagam",
     city: "Surat",
     pinCode: 395010,
-};
-employeeOne.contact = ["vivekvaghasiya201102@gmail.com", 9586252572];
+}, [9586252572, 7896587485]);
 console.log(employeeOne.getFullName());
 console.log(employeeOne.getAddress());
 console.log(employeeOne.contact);
+var employeeTwo = new employeeInfo("Vivek2", "Vaghasiya", 21, {
+    street: "Shiv Nagar Soc., Kargil Chowk",
+    landMark: "Punagam",
+    city: "Surat",
+    pinCode: 395010,
+}, []);
+console.log(employeeTwo.getFullName());
+console.log(employeeTwo.getAddress());
+console.log(employeeTwo.contact);
