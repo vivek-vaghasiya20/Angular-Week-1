@@ -5,14 +5,14 @@ body {
 }
 
 header {
-  background-color: #315b7d;
+  background-color: #54aef8;
   color: white;
   text-align: center;
   padding: 10px 0;
 }
 
 footer {
-  background-color: #315b7d;
+  background-color: #54aef8;
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -33,40 +33,45 @@ footer {
   margin-bottom: 10px;
   font-size: 2rem;
   text-align: right;
-  min-height: 40px;
+  min-height: 72px;
+  word-wrap: break-word;
   border-radius: 5px;
   padding: 10px;
 }
 
-.calculator-key {
+.calculator-key-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
 }
 
-.calculator-key-enter {
+.calculator-key {
+  min-height: 45px;
+}
+
+#calculator-key-enter {
   grid-column: 4/5;
-  grid-row: 4/span 2;
+  grid-row: 4/span 3;
 }
 
 button {
   font-size: 1.2em;
   border: none;
-  background-color: #f09f9c;
-  color: #494545;
+  background-color: #2f2c2c;
+  color: #ffffff;
   cursor: pointer;
   border-radius: 5px;
   padding: 10px;
 }
 
 button:hover {
-  background-color: #ffe2df;
+  background-color: #a1a1a1;
 }
 
-.calculator-key-allclear {
-  background-color: #e74c3c;
+#calculator-key-allClear {
+  background-color: #00e87c;
 }
 
 .wrapper {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 98px);
 }/*# sourceMappingURL=style.css.map */

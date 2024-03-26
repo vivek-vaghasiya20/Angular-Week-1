@@ -1,8 +1,8 @@
 // Variables
-$primary-color: #315b7d;
-$button-background: #f09f9c;
-$button-text-color: #494545;
-$button-hover-color: #ffe2df;
+$primary-color: #54aef8;
+$button-background: #2f2c2c;
+$button-text-color: #ffffff;
+$button-hover-color: #a1a1a1;
 $border-color: #a3a3a3;
 
 @mixin common-padding-radius() {
@@ -44,19 +44,24 @@ footer {
   margin-bottom: 10px;
   font-size: 2rem;
   text-align: right;
-  min-height: 40px;
+  min-height: 72px;
+  word-wrap: break-word;
   @include common-padding-radius;
 }
 
-.calculator-key {
+.calculator-key-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
 }
 
-.calculator-key-enter {
+.calculator-key {
+  min-height: 45px;
+}
+
+#calculator-key-enter {
   grid-column: 4 /5;
-  grid-row: 4 / span 2;
+  grid-row: 4 / span 3;
 }
 
 button {
@@ -65,7 +70,6 @@ button {
   background-color: $button-background;
   color: $button-text-color;
   cursor: pointer;
-
   @include common-padding-radius;
 }
 
@@ -73,10 +77,10 @@ button:hover {
   background-color: $button-hover-color;
 }
 
-.calculator-key-allclear {
-  background-color: #e74c3c;
+#calculator-key-allClear {
+  background-color: #00e87c;
 }
 
 .wrapper {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 98px);
 }

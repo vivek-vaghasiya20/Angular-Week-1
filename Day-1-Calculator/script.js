@@ -1,7 +1,11 @@
 let displayValue = "";
+let calcHistory = [];
+let historyPtr = 0;
 
 const clearValue = () => {
   displayValue = "";
+  calcHistory = [];
+  historyPtr = 0;
   document.getElementById("display-screen").innerHTML = displayValue;
 };
 
@@ -24,8 +28,12 @@ const appendToDisplay = (value) => {
   document.getElementById("display-screen").innerHTML = displayValue;
 };
 
-const calculte = () => {
+const calculate = () => {
   try {
+    historyPtr++;
+    calcHistory.push(displayValue);
+    console.log(historyPtr);
+    console.log(calcHistory);
     const result = eval(displayValue);
     document.getElementById("display-screen").innerHTML = result;
   } catch (error) {
@@ -34,8 +42,12 @@ const calculte = () => {
 };
 
 const percentageCalculate = () => {
-  displayValue = document.getElementById("display-screen").innerHTML;
   try {
+    displayValue = document.getElementById("display-screen").innerHTML;
+    historyPtr++;
+    calcHistory.push(displayValue);
+    console.log(historyPtr);
+    console.log(calcHistory);
     let result = eval(displayValue);
     if (!isNaN(result)) {
       result /= 100;
@@ -73,4 +85,17 @@ const addDot = (value) => {
     }
   }
   document.getElementById("display-screen").innerHTML = displayValue;
+};
+
+const moveHistory = (direction) => {
+  if (
+    0 <= historyPtr + direction &&
+    historyPtr + direction < calcHistory.length
+  ) {
+    historyPtr += direction;
+    document.getElementById("display-screen").innerHTML =
+      calcHistory[historyPtr];
+  } else {
+    console.log("you reached the end " + historyPtr);
+  }
 };
